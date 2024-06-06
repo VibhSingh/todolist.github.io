@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="input-section">
+                <h1>To-Do List</h1>
+                <form id="todo-form">
+                    <input type="text" id="task-name" placeholder="Task Name" required>
+                    <input type="date" id="task-date" required>
+                    <select id="task-priority" required>
+                        <option value="" disabled selected>Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+            <div class="image-section">
+                <form id="image-form">
+                    <input type="file" id="background-image-input" accept="image/*">
+                    <button type="submit">Set Background</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="task-columns">
+                <div class="column">
+                    <h2>Urgent</h2>
+                    <ul id="high-priority-list"></ul>
+                </div>
+                <div class="column">
+                    <h2>Medium</h2>
+                    <ul id="medium-priority-list"></ul>
+                </div>
+                <div class="column">
+                    <h2>Maybe</h2>
+                    <ul id="low-priority-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
